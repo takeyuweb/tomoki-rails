@@ -18,6 +18,9 @@
 
 .byebug_history
 
-# IDE
+config/database.yml
+
+# Development tools
 .idea
 *.iml
+.envrc

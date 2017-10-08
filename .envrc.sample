@@ -1,0 +1,2 @@
+export COMPOSE_FILE=docker-compose.development.yml
+export SLACK_API_TOKEN=
