@@ -81,6 +81,13 @@
 
 ## Slack Apps
 
+### Slash Command
+
+| Field | Value |
+| ----- | ----- |
+| Command | /tomoki |
+| Request URL | https://your-app/voices |
+
 ### Permissions
 
 #### Add slash commands
