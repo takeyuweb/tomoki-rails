@@ -1,2 +1,6 @@
 export COMPOSE_FILE=docker-compose.development.yml
 export SLACK_API_TOKEN=
+export TWILIO_NUMBER=
+export TWILIO_ACCOUNT_SID=
+export TWILIO_AUTH_TOKEN=
+export BASE_URL=

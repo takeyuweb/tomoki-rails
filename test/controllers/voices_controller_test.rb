@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class JobsControllerTest < ActionDispatch::IntegrationTest
+class VoicesControllerTest < ActionDispatch::IntegrationTest
   include ActiveJob::TestHelper
 
   setup do
@@ -19,10 +19,23 @@ class JobsControllerTest < ActionDispatch::IntegrationTest
     }
   end
 
-  test 'should create job' do
-    assert_enqueued_with(job: SendVoiceJob, args: [@job_params.stringify_keys]) do
-      post '/', params: @job_params
+  # TODO: 応答のテスト
+
+  test 'should create an instance of Voice' do
+    assert_difference('Voice.count') do
+      post '/voices', params: @job_params
     end
+  end
+
+  test 'should create job' do
+    assert_enqueued_with(job: SendVoiceJob) do
+      post '/voices', params: @job_params
+    end
+  end
+
+  test 'should return twiml' do
+    video = Voice.create!(from: 'XXXXXX', to: '@hoge', text: 'Text', response_url: 'https://hooks.slack.com/commands/xxxxx')
+    post "/voices/#{video.id}"
     assert_response :success
   end
 end

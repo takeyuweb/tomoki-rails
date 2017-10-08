@@ -56,3 +56,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'minitest-stub_any_instance'
 gem 'slack-ruby-client'
 gem 'webmock'
+gem 'twilio-ruby'
