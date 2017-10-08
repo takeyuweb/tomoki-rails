@@ -2,6 +2,10 @@
 
 声を届ける能力
 
+![image](https://user-images.githubusercontent.com/60980/31319819-a9cd7be6-aca4-11e7-9cf5-08b2eccf5d4d.png)
+
+`/tomoki @届け先 届けたいメッセージ`とやると、Slackに登録されている電話番号に声を届けるSlash Command
+
 ## 開発サーバー
 
 例はUbuntuの場合。他の環境では便宜パッケージを読み替えてください。
