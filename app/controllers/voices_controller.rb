@@ -33,6 +33,7 @@ class VoicesController < ApplicationController
     @voice = Voice.find(params[:id])
 
     twiml = Twilio::TwiML::VoiceResponse.new do |r|
+      r.pause(length: 1)
       r.say("グッドモーニン！#{@voice.to}！#{@voice.from}からのSlackメッセージを#{@voice.created_at.localtime('+09:00').strftime('%m月%d日%H時%m分')}からお届けするぜぇ", voice: 'alice', language: 'ja-JP')
       r.pause(length: 1)
       r.say(@voice.text, voice: 'alice', language: 'ja-JP')
